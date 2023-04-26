@@ -1,0 +1,77 @@
+.header {
+  background-color: #13538f;
+  color: white;
+  font-weight: 500;
+  font-size: medium;
+  text-align: left; 
+  padding: 1rem;
+  display: flex;
+}
+
+.header h1 {
+  padding-left: 1rem;
+  margin: 0;
+  align-self: center;
+}
+
+.profile {
+  position: fixed;
+  right: 0;
+  padding-right: 2rem;
+  display: flex;
+}
+
+.profile-icon {
+  align-self: center;
+  padding-right: .5rem;
+}
+
+.header .logo {
+  align-self: center;
+}
+
+.navBarContainer {
+  background-color: #13538f;
+  height: -webkit-fill-available;
+  width: 10rem;
+  display: grid;
+  position: absolute;
+}
+
+.navBar {
+  size: 5rem;
+  display: grid;
+  position: absolute;
+  background-color: #13538f;
+  width: 10rem;  
+}
+
+.navItem {    
+  font-size: medium;
+  font-weight: 400;  
+  height: 4rem;
+  padding-left: 1rem;
+}
+
+.navItem a {
+  color: white;
+  text-decoration: none;
+  height: 4rem;
+  align-content: center;  
+  vertical-align:middle;
+  display: inline-grid;
+  padding-left: 8px;
+}
+
+.navItem :hover {
+  color: lightblue;
+}
+
+.pageContainer {
+  margin-left: 10rem;
+  padding-left: 2rem;
+}
+
+.page {
+  display: grid;
+}
