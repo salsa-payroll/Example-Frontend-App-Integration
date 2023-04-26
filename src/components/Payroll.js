@@ -17,7 +17,7 @@ const Payroll = ({salsa}) => {
      *
      * This simple component allows you to test the ability to embed without having to have any auth tokens configured
      */
-    const salsaElement = salsa.elements.create('demo');
+    // const salsaElement = salsa.elements.create('demo');
 
     /**
      * Employer Dashboard component
@@ -35,13 +35,13 @@ const Payroll = ({salsa}) => {
     /**
      *  Mount the element into this application's DOM at the specified location.
      */
-    salsa.elements.mount(salsaElement, '#salsa-container');
+    // salsa.elements.mount(salsaElement, '#salsa-container');
 
     return () => {
       /**
        * When this component unmounts, cleanup the Salsa element
        */
-      salsa.elements.destroy(salsaElement);
+      // salsa.elements.destroy(salsaElement);
     };
     }
     return;  
@@ -50,7 +50,7 @@ const Payroll = ({salsa}) => {
   return (
     <div>
       {/* Create a container to host the embedded Salsa UI */}
-      <div id='salsa-container' style={{height: 'calc(100vh - 150px)'}}/>
+      {/* <div id='salsa-container' style={{height: 'calc(100vh - 150px)'}}/> */}
       <div>
         <h3>
           To learn how to embed Salsa Express UI follow the{' '}

@@ -1,6 +1,6 @@
 # Example-Frontend-App-Integration
 
-This is a mock web application for a pretend organization "Union Mate". Use this application to learn how to embed our web UI integration. Follow along with [this tutorial](https://docs.salsa.dev/docs/express-embedded-ui).
+This is a mock web application for a pretend organization "Union Mate".  Use this application to learn how to embed our web UI integration. Follow along with [this tutorial](https://docs.salsa.dev/docs/express-embedded-ui).
 
 ![Embedded Payroll Run](/public/payroll-demo.png "Embedded Payroll Run")
 
