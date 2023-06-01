@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "0a17e241-5933-492d-b16c-fc2aff9a56f8",
+		"name": "Quickstart guide - Salsa Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Set up an Employer",
+			"item": [
+				{
+					"name": "Create Employer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"businessName\": \"Shack 22\",\n  \"country\": \"USA\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers/{{employerId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers",
+								"{{employerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Employer details and onboard Employer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers/{{employerId}}/mock-onboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers",
+								"{{employerId}}",
+								"mock-onboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Set up Workers",
+			"item": [
+				{
+					"name": "Create Worker",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Olivia\",\n  \"lastName\": \"Johnson\",\n  \"classification\": \"EMPLOYEE\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers/{{employerId}}/workers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers",
+								"{{employerId}}",
+								"workers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Worker",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers/{{employerId}}/workers/{{workerId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers",
+								"{{employerId}}",
+								"workers",
+								"{{workerId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Worker details and onboard Workers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"workerIds\": [\n    \"{{workerId}}\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/employers/{{employerId}}/workers/mock-onboard",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"employers",
+								"{{employerId}}",
+								"workers",
+								"mock-onboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Send Compensation Data",
+			"item": [
+				{
+					"name": "Get organization compensation policies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/organization-compensation-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"organization-compensation-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create compensations for Workers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": [\n        {\n            \"type\": \"PaystreamCompensationItemInput\",            \n            \"compensationReferenceId\": \"{{fixedAmountCompensationReferenceId}}\",\n            \"workerId\": \"{{workerId}}\",\n            \"startDate\": \"{{workPeriodStartDate}}\",\n            \"endDate\": \"{{workPeriodEndDate}}\",\n            \"amount\": \"1000\"                    \n        },\n        {\n            \"type\": \"PaystreamCompensationItemInput\",\n            \"compensationReferenceId\": \"{{hourlyCompensationReferenceId}}\",\n            \"workerId\": \"{{workerId}}\",\n            \"startDate\": \"{{workPeriodStartDate}}\",\n            \"endDate\": \"{{workPeriodEndDate}}\",\n            \"rate\": \"17.50\",\n            \"hours\": \"25\"            \n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/paystream",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"paystream"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create a User Token",
+			"item": [
+				{
+					"name": "Employer Admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Set parterId on env\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"auth-token\", jsonData.data.token);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"role\": \"employer-admin\",\n        \"employerId\": \"{{employer-id}}\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/auth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worker User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Set parterId on env\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.environment.set(\"auth-token\", jsonData.data.token);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"role\": \"worker-user\",\n        \"workerId\": \"{{worker-id}}\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/rest/v1/auth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"rest",
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.sandbox.salsa.dev",
+			"type": "string"
+		},
+		{
+			"key": "bearerToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "employerId",
+			"value": ""
+		},
+		{
+			"key": "workerId",
+			"value": ""
+		},
+		{
+			"key": "partnerCompensationReferenceHourly",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "partnerCompensationReferenceFixedAmount",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "workPeriodStartDate",
+			"value": "2023-01-01",
+			"type": "string"
+		},
+		{
+			"key": "workPeriodEndDate",
+			"value": "2023-01-07",
+			"type": "string"
+		}
+	]
+}

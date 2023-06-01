@@ -1,6 +1,8 @@
 # Example-Frontend-App-Integration
 
-This is a mock web application for a pretend organization "Union Mate". Use this application to learn how to embed our web UI integration. Follow along with [this tutorial](https://docs.salsa.dev/docs/express-embedded-ui).
+This is a mock web application for a pretend organization "Union Mate".  Use this application to learn how to embed our web UI integration. Follow along with [this tutorial](https://docs.salsa.dev/docs/express-embedded-ui).
+
+![Embedded Payroll Run](/public/payroll-demo.png "Embedded Payroll Run")
 
 ## Initial Development Setup
 
@@ -15,8 +17,9 @@ npm install
 ```bash
 npm start
 ```
+
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [https://localhost:3000](https://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
