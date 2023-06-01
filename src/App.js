@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import './App.css';
 import { About, Dashboard, Header, NavBar, Payroll } from './components';
-import { useScript } from './hooks/useScript';
+// import { useScript } from './hooks/useScript';
+// import { useState } from 'react';
 
 function App() {
   /**
@@ -13,18 +13,19 @@ function App() {
    * from by passing an initialization parameter to the library:
    * window.Salsa('my-public-app-apikey', {env: 'sandbox'});
    */
-  useScript('https://js.salsa.dev/v0');
-  const [salsa, setSalsa] = useState();
-  if (window.Salsa && !salsa) {
-    setSalsa(window.Salsa('my-public-client-key', { env: 'sandbox' }));
-  }
+  // useScript('https://js.salsa.dev/v0');
+  // const [salsa, setSalsa] = useState();
+  // if(window.Salsa && !salsa) {
+  //   setSalsa(window.Salsa('my-public-client-key', {env: 'sandbox'}));
+  // }
 
   return (
     <div className="App">
       <Header />
       <div className="content">
         <NavBar />
-        <Router salsa={salsa} />
+        <Router />
+        {/* <Router salsa={salsa}/>       */}
       </div>
     </div>
   );
