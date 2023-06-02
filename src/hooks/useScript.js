@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react';
 
 export const useScript = (url, name) => {
-
-  const [lib, setLib] = useState({})
+  const [lib, setLib] = useState({});
 
   useEffect(() => {
-    const script = document.createElement('script')
+    const script = document.createElement('script');
 
-    script.src = url
-    script.async = true
-    script.onload = () => setLib({ [name]: window[name] })
+    script.src = url;
+    script.async = true;
+    script.onload = () => setLib({ [name]: window[name] });
 
-    document.body.appendChild(script)
+    document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script)
-    }
-  }, [url, name])
+      document.body.removeChild(script);
+    };
+  }, [url, name]);
 
-  return lib
-}
+  return lib;
+};
