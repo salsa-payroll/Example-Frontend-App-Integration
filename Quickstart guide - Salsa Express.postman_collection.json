@@ -376,7 +376,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"data\": {\n        \"role\": \"employer-admin\",\n        \"employerId\": \"{{employer-id}}\"\n    }\n}",
+							"raw": "{\n        \"role\": \"EMPLOYER_ADMIN\",\n        \"employerIds\": [\"{{employer-id}}\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -426,7 +426,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"data\": {\n        \"role\": \"worker-user\",\n        \"workerId\": \"{{worker-id}}\"\n    }\n}",
+							"raw": "{\n        \"role\": \"WORKER_USER\",\n        \"workerId\": \"{{worker-id}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
