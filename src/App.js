@@ -29,7 +29,7 @@ function App() {
   // useEffect( () => {
   //  loadSalsaJs('my-public-client-key', {env: 'sandbox'})
   //    .then((salsaJs)=>setSalsa(salsaJs));
-  // }, [salsa]);
+  // }, []);
 
     return (
     <div className="App">
