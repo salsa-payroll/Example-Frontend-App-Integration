@@ -2,10 +2,11 @@ import './App.css';
 import { About, Dashboard, Header, NavBar, Payroll } from './components';
 // import { useScript } from './hooks/useScript';
 // import { useState } from 'react';
+// import { loadSalsaJs } from "@salsa-payroll/salsa-js";
 
 function App() {
   /**
-   * Load & Initialize Salsa
+   * Load & Initialize Salsa via Script
    *
    * This initialization is required only once for the application.
    *
@@ -19,13 +20,24 @@ function App() {
   //   setSalsa(window.Salsa('my-public-client-key', {env: 'sandbox'}));
   // }
 
-  return (
+  /**
+   * Load & Initialize Salsa via Library
+   *
+   * This initialization is required only once for the application.
+   */
+  // const [salsa, setSalsa] = useState();
+  // useEffect( () => {
+  //  loadSalsaJs('my-public-client-key', {env: 'sandbox'})
+  //    .then((salsaJs)=>setSalsa(salsaJs));
+  // }, []);
+
+    return (
     <div className="App">
       <Header />
       <div className="content">
         <NavBar />
         <Router />
-        {/* <Router salsa={salsa}/>       */}
+         {/*<Router salsa={salsa}/>*/}
       </div>
     </div>
   );
